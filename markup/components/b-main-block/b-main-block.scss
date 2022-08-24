@@ -1,0 +1,33 @@
+.b-main-block {
+    padding: rem(134px) 0;
+    background-blend-mode: normal, normal, darken;
+    @include cover;
+}
+.b-main-block__title {
+    font-family: $Releway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(64px);
+    line-height: 1.2;
+    color: #FFFFFF;
+    @include margin-bottom-not-last(g(9));
+}
+.b-main-block__description {
+    max-width: 331px;
+    font-family: $Releway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #FFFFFF;
+}
+
+@include media-breakpoint-down(md) {
+    .b-main-block__title {
+        font-size: 30px;
+    }
+    .b-main-block__description {
+        font-size: 14px;
+    }
+}
+

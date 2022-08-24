@@ -1,0 +1,32 @@
+.b-pluses-item {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+.b-pluses-item__img {
+    width: rem(60px);
+    height: rem(60px);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FBFBFB;
+    @include margin-bottom-not-last(g(8));
+    border: 1px solid #F2F2F2;
+    img {
+        max-width: rem(26px);
+    }
+}
+.b-pluses-item__text {
+    font-family: $Releway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(18px);
+    line-height: 1.2;
+    color: #292D32;
+    width: 100%;
+
+}
+

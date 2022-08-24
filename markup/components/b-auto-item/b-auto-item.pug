@@ -1,0 +1,25 @@
+include ../b-btn/b-btn
+mixin b-auto-item(data)
+    +b.b-auto-item
+        +e.top
+            +e.img
+                img(src=data.img)
+        +e.bottom
+            +e.name!=data.name
+            +e.params-list
+                +e.param
+                    +e.param-name Габариты:
+                    +e.param-number!=data.params.dimensions
+                +e.param
+                    +e.param-name Загрузка:
+                    +e.param-number!=data.params.capacity
+                +e.param
+                    +e.param-name Грузоподъемность:
+                    +e.param-number!=data.params.loadCapacity
+            +e.btn
+                +b-btn({
+                    name: 'Заказать от 580 р',
+                    modeList: ['green'],
+                    href: '#callme'
+                })
+

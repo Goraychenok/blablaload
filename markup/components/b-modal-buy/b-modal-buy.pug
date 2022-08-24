@@ -1,0 +1,15 @@
+mixin b-modal-buy(data)
+    +b.b-modal-buy
+        +e.container
+            +e.form
+                form
+                    +e.content
+                        +e.title Онлайн-оплата заказа
+                        +e.input
+                            +e.INPUT.form-control(type="tel" required placeholder="Ваш номер телефона")
+                        +e.input
+                            +e.INPUT.form-control(type="text" required placeholder="Сумма заказа")
+                        +e.call
+                            +e.BUTTON.btn(type='submit') Выбрать способ оплаты
+                        +e.span Нажимая кнопку «Выбрать способ оплаты», вы соглашаетесь
+                            span на обработку ваших персональных данных

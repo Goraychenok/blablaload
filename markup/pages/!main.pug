@@ -1,0 +1,197 @@
+//-Главная
+extends ../layouts/default.pug
+
+
+include ../components/page-header/page-header
+include ../components/page-footer/page-footer
+include ../components/b-stock-list/b-stock-list
+include ../components/b-pluses-list/b-pluses-list
+include ../components/b-services-list/b-services-list
+include ../components/b-utp/b-utp
+include ../components/b-pluses-second-list/b-pluses-second-list
+include ../components/b-auto-list/b-auto-list
+include ../components/b-questions-list/b-questions-list
+include ../components/b-main-block/b-main-block
+include ../components/b-calculator/b-calculator
+
+block vars
+    - var title = 'Главная'
+
+block content
+    .page__header
+        +page-header
+    .page__wrapper
+        .page__b-main-block
+            +b-main-block({
+                img: '__static__img/content/main.jpg',
+                title: 'Грузоперевозки до 5 тонн в Санкт-Петербург и обратно',
+                desc: 'Сделай заказ сейчас и получите гарантированную скидку'
+            })
+        .page__b-calculator
+            +b-calculator
+        .page__b-stock-list#stock
+            +b-stock-list({
+                stocks: [
+                    {
+                        title: '18 июля',
+                        description: 'перевозка «Отдельной машиной», когда в машину грузится только Ваше',
+                        data: 'только 18 сентября'
+                    },
+                    {
+                        title: '18 июля',
+                        description: 'перевозка «Отдельной машиной», когда в машину грузится только Ваше',
+                        modeList: ['light']
+                    },
+                    {
+                        title: '18 июля',
+                        description: 'перевозка «Отдельной машиной», когда в машину грузится только Ваше',
+                        modeList: ['light']
+                    },
+                ]
+            })
+        .page__b-pluses-list
+            +b-pluses-list({
+                pluses: [
+                    {
+                        img: '__static__img/content/Home.svg',
+                        description: 'Доставка на следующий день, от двери до двери'
+                    },
+                    {
+                        img: '__static__img/content/folder-open.svg',
+                        description: 'Возможность заплатить за место в машине'
+                    },
+                    {
+                        img: '__static__img/content/car.svg',
+                        description: 'Возможность заплатить за место в машине'
+                    },
+                    {
+                        img: '__static__img/content/routing.svg',
+                        description: 'GPS трекерами, что позволяет отслеживать груз'
+                    },
+                ]
+            })
+        .page__b-services-list#services
+            +b-services-list({
+                services: [
+                    {
+                        img: '__static__img/content/service-first.jpg',
+                        title: 'Переезды',
+                        price: 'от 3000 ₽'
+                    },
+                    {
+                        img: '__static__img/content/service-second.jpg',
+                        title: 'Перевозка',
+                        price: 'от 3000 ₽'
+                    },
+                    {
+                        img: '__static__img/content/service-third.jpg',
+                        title: 'Догруз грузом',
+                        price: 'от 3000 ₽'
+                    },
+                    {
+                        img: '__static__img/content/service-fourd.jpg',
+                        title: 'Целая машина',
+                        price: 'от 3000 ₽'
+                    },
+                ]
+            })
+        .page__b-utp
+            +b-utp({
+                title: 'Получите быстрый расчёт стоимости',
+                description: 'Мы свяжемся с вами и предложим выгодную ставку'
+            })
+        .page__b-pluses-second-list
+            +b-pluses-second-list({
+                pluses: [
+                    {
+                        img: '__static__img/content/Home.svg',
+                        description: 'Доставка на следующий день, от двери до двери'
+                    },
+                    {
+                        img: '__static__img/content/folder-open.svg',
+                        description: 'Возможность заплатить за место в машине'
+                    },
+                    {
+                        img: '__static__img/content/car.svg',
+                        description: 'Возможность заплатить за место в машине'
+                    },
+                    {
+                        img: '__static__img/content/routing.svg',
+                        description: 'GPS трекерами, что позволяет отслеживать груз'
+                    },
+                ]
+            })
+        .page__b-auto-list#autopark
+            +b-auto-list({
+                items: [
+                    {
+                        img: '__static__img/content/car.png',
+                        name: 'Фургон',
+                        params: {
+                            dimensions: '3.2м*1.7м*2.1м',
+                            capacity: '12 м³',
+                            amount: '2',
+                            loadCapacity: '1.5 т'
+                        }
+                    },
+                    {
+                        img: '__static__img/content/car.png',
+                        name: 'Фургон',
+                        params: {
+                            dimensions: '3.2м*1.7м*2.1м',
+                            capacity: '12 м³',
+                            amount: '2',
+                            loadCapacity: '1.5 т'
+                        }
+                    },
+                    {
+                        img: '__static__img/content/car.png',
+                        name: 'Фургон',
+                        params: {
+                            dimensions: '3.2м*1.7м*2.1м',
+                            capacity: '12 м³',
+                            amount: '2',
+                            loadCapacity: '1.5 т'
+                        }
+                    },
+                ]
+            })
+        .page__b-questions-list#questions
+            +b-questions-list({
+                items: [
+                    {
+                        name: 'Как забронировать грузовое место?',
+                        description: 'Сроки зависят от вида транспорта. Рассмотрим на примере транспортировки из Москвы в Южно-Сахалинск: авиационным транспортом транзитное время займет 2-3 дня, а морским ж/д (до Хабаровска или Владивостока) 17 дней'
+                    },
+                    {
+                        name: 'Как забронировать грузовое место?',
+                        description: 'Сроки зависят от вида транспорта. Рассмотрим на примере транспортировки из Москвы в Южно-Сахалинск: авиационным транспортом транзитное время займет 2-3 дня, а морским ж/д (до Хабаровска или Владивостока) 17 дней'
+                    },
+                    {
+                        name: 'Как забронировать грузовое место?',
+                        description: 'Сроки зависят от вида транспорта. Рассмотрим на примере транспортировки из Москвы в Южно-Сахалинск: авиационным транспортом транзитное время займет 2-3 дня, а морским ж/д (до Хабаровска или Владивостока) 17 дней'
+                    },
+                    {
+                        name: 'Как забронировать грузовое место?',
+                        description: 'Сроки зависят от вида транспорта. Рассмотрим на примере транспортировки из Москвы в Южно-Сахалинск: авиационным транспортом транзитное время займет 2-3 дня, а морским ж/д (до Хабаровска или Владивостока) 17 дней'
+                    },
+                    {
+                        name: 'Как забронировать грузовое место?',
+                        description: 'Сроки зависят от вида транспорта. Рассмотрим на примере транспортировки из Москвы в Южно-Сахалинск: авиационным транспортом транзитное время займет 2-3 дня, а морским ж/д (до Хабаровска или Владивостока) 17 дней'
+                    },
+                    {
+                        name: 'Как забронировать грузовое место?',
+                        description: 'Сроки зависят от вида транспорта. Рассмотрим на примере транспортировки из Москвы в Южно-Сахалинск: авиационным транспортом транзитное время займет 2-3 дня, а морским ж/д (до Хабаровска или Владивостока) 17 дней'
+                    },
+                ]
+            })
+
+
+
+    .page__footer
+        +page-footer
+
+
+
+
+

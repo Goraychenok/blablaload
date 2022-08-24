@@ -1,0 +1,61 @@
+include ../b-modal/b-modal
+include ../b-modal-buy/b-modal-buy
+mixin page-footer(data)
+    +b.page-footer
+        +e.top
+            .container
+                +e.top-block
+                    +e.logo
+                        img(src="__static__img/content/logo.svg")
+                    +e.nav-list
+                        +e.A.link(href="#stock") Акции
+                        +e.A.link(href="#services") Услуги
+                        +e.A.link(href="#autopark") Автопарк
+                        +e.A.link(href="#autopark") Как мы работаем
+                        +e.A.link(href="#questions") Вопрос - ответ
+                    +e.right-block
+                        +e.A.mail(href="mailto:blablagruz@ya.ru") blablagruz@ya.ru
+                        +e.whats
+                            !=  pugHelpers.Icon.call(locals, {iconName: 'watsup'})
+        +e.bottom
+            .container
+                +e.bottom-block
+                    +e.left © 2022 Все права защищены
+                    +e.right Политика конфиденциальности
+        +e.mobile
+            .container
+                +e.nav-list
+                    +e.A.link(href="#stock") Акции
+                    +e.A.link(href="#services") Услуги
+                    +e.A.link(href="#autopark") Автопарк
+                    +e.A.link(href="#autopark") Как мы работаем
+                    +e.A.link(href="#questions") Вопрос - ответ
+                +e.mobile-middle
+                    +e.mobile-middle-left
+                        +e.mobile-middle-label Связаться с нами:
+                        +e.mobile-middle-phone-block
+                            +e.A.mobile-middle-phone(href="tel:8(967)431-63-33") 8(967)431-63-33
+                            +e.A.mobile-middle-phone(href="tel:8(487)271-63-33") 8(487)271-63-33
+                        +e.A.mobile-middle-mail(href="mailto:blablagruz@ya.ru") blablagruz@ya.ru
+                    +e.mobile-middle-right
+                        +e.whats
+                            !=  pugHelpers.Icon.call(locals, {iconName: 'watsup'})
+                +e.bottom-block
+                    +e.left © 2022 Все права защищены
+                    +e.right Политика конфиденциальности
+
+
+    #callme.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+        .modal-dialog.modal-sm(role='document')
+            .modal-content.modal-content_beige
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    !=  pugHelpers.Icon.call(locals, {iconName: 'close'})
+                +b-modal
+    #callme_buy.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+        .modal-dialog.modal-sm(role='document')
+            .modal-content.modal-content_beige
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    !=  pugHelpers.Icon.call(locals, {iconName: 'close'})
+                +b-modal-buy
+
+

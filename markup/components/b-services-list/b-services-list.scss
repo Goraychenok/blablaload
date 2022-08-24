@@ -1,0 +1,43 @@
+.b-services-list {
+
+}
+.b-services-list__row {
+    @include margin-bottom-not-last(g(11));
+
+}
+.b-services-list__title {
+    font-family: $Releway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(42px);
+    line-height: 1.2;
+    color: #292D32;
+}
+
+.b-services-list__row-second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.b-services-list__item {
+    width: 24%;
+}
+@include media-breakpoint-down(md) {
+    .b-services-list__item {
+        min-width: 300px;
+        width: 300px;
+        margin: 5px;
+    }
+    .b-services-list__row-second {
+        justify-content: inherit;
+        overflow: visible;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .b-services-list {
+        overflow: hidden;
+    }
+}
+

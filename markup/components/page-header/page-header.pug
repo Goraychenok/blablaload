@@ -1,0 +1,75 @@
+include ../b-btn/b-btn
+mixin page-header(data)
+    -
+        var data = data || {}
+        var modeList = data.modeList || []
+        var mode = ''
+        modeList.map(n => mode += `_${n} `)
+    +b.page-header(class=mode)
+        +e.top
+            .container
+                +e.row.row
+                    .col-xl-2.col-lg-3
+                    .col-xl-4.col-lg-5
+                        +e.phone-block
+                            +e.A.phone(href="tel:8(967)431-63-33") 8(967)431-63-33
+                            +e.A.phone(href="tel:8(487)271-63-33") 8(487)271-63-33
+                    .col-xl-6.col-lg-4
+                        +e.right
+                            +e.social
+                                !=pugHelpers.Icon.call(locals, {iconName: 'watsup'})
+                            +e.callback
+                                +b-btn({
+                                    name:'Оставить заявку',
+                                    modeList: ['green'],
+                                    href: '#callme'
+                                })
+        +e.bottom
+            .container
+                +e.row-second.row
+                    .col-xl-2.col-lg-3
+                    .col-xl-8.col-lg-9
+                        +e.link-list
+                            +e.A.link(href="#stock") Акции
+                            +e.A.link(href="#services") Услуги
+                            +e.A.link(href="#autopark") Автопарк
+                            +e.A.link(href="#questions") Вопрос - ответ
+                    .col-xl-2
+                        +e.A.buy(href="#callme_buy" data-toggle='modal')
+                            !=pugHelpers.Icon.call(locals, {iconName: 'ik'})
+        +e.container.container
+            +e.logo
+                img(src="__static__img/content/logo.svg")
+        +e.mobile
+            .container
+                +e.row
+                    +e.logo-mobile
+                        img(src="__static__img/content/logo.svg")
+                    +e.mobile-phone 8(967)431-63-33
+                    +e.burger.js-menu
+                        .gamburger
+                            span.gamburger-line1
+                            span.gamburger-line2
+            +e.mobile-menu
+                .container
+                    +e.mobile-link-list
+                        +e.A.link(href="#stock") Акции
+                        +e.A.link(href="#services") Услуги
+                        +e.A.link(href="#autopark") Автопарк
+                        +e.A.link(href="#questions") Вопрос - ответ
+                    +e.mobile-buy
+                        +e.A.buy(href="#callme_buy" data-toggle='modal')
+                            !=pugHelpers.Icon.call(locals, {iconName: 'ik'})
+                        span Оплата онлайн
+                    +e.mobile-bottom
+                        +e.mobile-bottom-left
+                            +e.mobile-label Связаться с нами:
+                            +e.mobile-phone-block
+                                +e.mobile-phone(href="tel:8(967)431-63-33") 8(967)431-63-33
+                                +e.mobile-phone(href="tel:8(487)271-63-33") 8(487)271-63-33
+                            +e.mobile-mail(href="mailto:blablagruz@ya.ru") blablagruz@ya.ru
+                        +e.mobile-bottom-right
+                            +e.social
+                                !=pugHelpers.Icon.call(locals, {iconName: 'watsup'})
+
+

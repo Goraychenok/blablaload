@@ -1,0 +1,22 @@
+.b-auto-list {
+
+}
+.b-auto-list__title {
+    font-family: $Releway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(42px);
+    line-height: 1.2;
+    text-align: center;
+    color: #292D32;
+    @include margin-bottom-not-last(g(11));
+}
+.b-auto-list__row {
+    @include gutter-y(30px);
+    @include gutter(10px);
+}
+.b-auto-list__item {
+
+}
+
+

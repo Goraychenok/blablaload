@@ -1,0 +1,19 @@
+
+mixin b-modal(data)
+    +b.b-modal
+        +e.container
+            +e.form
+                form
+                    +e.content
+                        +e.title Оставить заявку
+                        +e.input
+                            +e.INPUT.form-control(type="text" placeholder="Ваше имя")
+                        +e.input
+                            +e.INPUT.form-control(type="tel" required placeholder="Ваш номер телефона")
+                        +e.call
+                            +e.BUTTON.btn(type='submit') Оставить заявку
+                        +e.span Нажимая кнопку «Выбрать способ оплаты», вы соглашаетесь
+                            span на обработку ваших персональных данных
+
+
+

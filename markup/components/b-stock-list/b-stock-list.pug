@@ -1,0 +1,23 @@
+mixin b-stock-list(data)
+    -
+        var data = data || {}
+    +b.b-stock-list
+        .container
+            +e.row.row
+                .col-lg-12
+                    +e.title Акции
+            +e.row-second.row
+                for item in data.stocks
+                    -
+                        var modeList = item.modeList || []
+                        var mode = ''
+                        modeList.map(n => mode += `_${n} `)
+                    .col-lg-4.col-md-6
+                        +e.block(class=mode)
+                            if item.data
+                                +e.data
+                                    span!=item.data
+                            +e.text
+                                +e.name!=item.title
+                                +e.description!=item.description
+

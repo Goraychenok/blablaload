@@ -1,0 +1,16 @@
+include ../b-services-item/b-services-item
+mixin b-services-list(data)
+    +b.b-services-list
+        .container
+            +e.row.row
+                .col-lg-12
+                    +e.title Услуги
+            +e.row-second
+                for item in data.services
+                    +e.item
+                        +b-services-item({
+                            img: item.img,
+                            title: item.title,
+                            price: item.price
+                        })
+

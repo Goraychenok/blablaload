@@ -1,0 +1,10 @@
+mixin b-pluses-second-list(data)
+    +b.b-pluses-second-list
+        .container
+            +e.row
+                for item in data.pluses
+                    +e.item
+                        +b-pluses-item({
+                            img: item.img,
+                            text: item.description
+                        })

@@ -1,0 +1,10 @@
+include ../b-auto-item/b-auto-item
+mixin b-auto-list(data)
+    +b.b-auto-list
+        .container
+            +e.title Наш автопарк
+            +e.row.row
+                for item in data.items
+                    .col-lg-4.col-md-6
+                        +e.item
+                            +b-auto-item(item)

@@ -1,0 +1,16 @@
+include ../b-btn/b-btn
+mixin b-utp(data)
+    +b.b-utp
+        .container
+            +e.block
+                +e.title!=data.title
+                +e.description!=data.description
+                +e.btn
+                    +b-btn({
+                        name: 'Оставить заявку',
+                        modeList: ['utp'],
+                        href: '#callme'
+                    })
+
+
+

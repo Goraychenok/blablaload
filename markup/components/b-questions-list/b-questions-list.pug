@@ -1,0 +1,14 @@
+include ../b-auestions-item/b-auestions-item
+mixin b-questions-list(data)
+    +b.b-questions-list
+        .container
+            +e.title Вопрос - ответ
+            +e.row.row
+                for item in data.items
+                    .col-lg-6
+                        +e.item
+                            +b-auestions-item({
+                                name: item.name,
+                                description: item.description
+                            })
+

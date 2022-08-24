@@ -1,0 +1,7 @@
+mixin b-auestions-item(data)
+    +b.b-auestions-item
+        +e.header
+            +e.name!=data.name
+            +e.arrow
+                !=  pugHelpers.Icon.call(locals, {iconName: 'arrow'})
+        +e.body!=data.description

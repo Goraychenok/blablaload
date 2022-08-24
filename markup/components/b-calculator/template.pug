@@ -1,0 +1,37 @@
+include ../b-btn/b-btn
+include ../../../node_modules/bemto.pug/bemto.pug
+
++b.b-calculator
+    .container(v-cloak)
+        +e.block
+            +e.title Рассчитать стоимость
+            +e.tabs
+                +e.tab(v-for="item in filterData"
+
+                )
+                    template(v-if="item.type === 'select'" )
+                        +e.select
+                            vSelect(
+                                :options="item.options",
+                                v-model="item.value",
+                            )
+                    template(v-if="item.type === 'meters'")
+                        +e.input()
+                            +e.LABEL.label
+                                input(v-model="item.value", :placeholder="longName" )
+                    template(v-if="item.type === 'text'" )
+                        +e.input
+                            +e.LABEL.label
+                                input(v-model="item.value", :placeholder="item.name")
+            +e.info
+                +e.info-left
+                    +e.info-text Доставка: от 2 до 3 дней
+                +e.info-right
+                    +e.info-text(v-html="getCost" )
+                    +e.btn
+                        +b-btn({
+                            name: 'Оставить заявку',
+                            modeList: ['green'],
+                            href:'#callme_buy'
+                        })
+

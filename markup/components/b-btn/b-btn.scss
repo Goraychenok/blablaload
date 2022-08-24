@@ -1,0 +1,56 @@
+.b-btn {
+    padding: g(6) g(7);
+    font-family: $Releway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.2;
+    border-radius: 93px;
+    cursor: pointer;
+    transition: 0.7s color, background, border;
+    &_light {
+        color: #FFFFFF;
+        border: 2px solid #FFFFFF;
+        padding: 12px 17px;
+        &:hover {
+            background: #398860;
+            border: 2px solid #398860;
+            color: #fff;
+        }
+    }
+    &_white {
+        padding: g(6) g(11);
+        background: #fff;
+        border: 2px solid #FFFFFF;
+        font-size: 14px;
+        color: #398860;
+        &:hover {
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+    }
+    &_green {
+        font-size: 14px;
+        color: #fff;
+        padding: g(7) g(11);
+        background: #398860;
+        border: 2px solid #398860;
+        &:hover {
+            background: #244448;
+            border: 2px solid #244448;
+        }
+    }
+    &_utp{
+        font-size: 14px;
+        color: #fff;
+        padding: g(7) g(11);
+        background: #398860;
+        &:hover {
+            background: #244448;
+        }
+    }
+}
+.b-btn_block {
+    display: inline-block;
+}

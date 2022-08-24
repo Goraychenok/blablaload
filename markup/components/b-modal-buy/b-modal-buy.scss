@@ -1,0 +1,169 @@
+.modal .close {
+    position: absolute;
+    top: rem(18);
+    right: rem(18);
+    background: transparent;
+    stroke: #979797;
+    padding: 0;
+    z-index: 15;
+    &:hover {
+        stroke: #3C9D6C;
+    }
+}
+
+.b-modal-buy__form {
+    display: block;
+    background: #FFFFFF;
+    border-radius: 23px;
+    box-sizing: border-box;
+    padding: 48px 20px;
+    filter: drop-shadow(20px 24px 42px rgba(0, 0, 0, 0.1));
+    text-align: center;
+
+    label {
+
+    }
+
+    input {
+
+
+    }
+
+    label {
+
+    }
+
+    .b-checkbox {
+        margin-bottom: g(9);
+        text-align: start;
+
+        label {
+            font-size: 14px;
+            @include media-breakpoint-down(xs) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.b-modal-buy__form-control {
+
+    box-sizing: border-box;
+    width: 100%;
+    background: #FBFBFB;
+    border: 1px solid #F2F2F2;
+    border-radius: 12px;
+    padding: 22px 20px;
+    font-family: $Releway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #292D32;
+}
+
+.b-modal-buy__label {
+    color: #2B2B2B;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: $Releway;
+    display: flex;
+    flex-direction: column;
+}
+
+.b-modal-buy__input {
+    margin-bottom: 12px;
+    &:nth-child(3) {
+        margin-bottom: 24px;
+    }
+}
+
+.b-modal-buy__title {
+    font-family: $Releway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+    color: #292D32;
+    margin-bottom: 24px;
+}
+
+.b-modal-buy__btn {
+    width: 100%;
+    font-family: $Releway;
+    font-weight: 700;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #fff;
+    padding: g(7) g(11);
+    background: #398860;
+    border: 2px solid #398860;
+    &:hover {
+        background: #244448;
+        border: 2px solid #244448;
+    }
+}
+
+.b-modal-buy__btn-text {
+    color: #323232;
+    font-weight: normal;
+    font-size: 15px;
+
+    p {
+        font-family: $Releway;
+        margin-bottom: g(5);
+    }
+    a {
+        font-family: $Inter;
+        display: flex;
+    }
+}
+
+.b-modal-buy__call {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.b-modal-buy__input {
+    //font-family: $Lato;
+    margin-bottom: 12px;
+    &:nth-child(3) {
+        margin-bottom: 24px;
+    }
+}
+
+.b-modal-buy__content {
+
+}
+
+.b-modal-buy__tel {
+    color: #323232;
+    font-weight: normal;
+    font-size: 15px;
+    @include link-h;
+}
+.b-modal-buy__span {
+    font-family: $Releway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #87898C;
+    span {
+        color: #8AC5A7;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .b-modal-buy__call {
+        flex-direction: column;
+    }
+    .b-modal-buy__btn {
+        margin-right: 0;
+        margin-bottom: g(8);
+    }
+}
+

@@ -1,0 +1,9 @@
+include ../b-pluses-item/b-pluses-item
+include ../b-pluses-second-list/b-pluses-second-list
+mixin b-pluses-list(data)
+    +b.b-pluses-list
+        .container
+            +e.row.row
+                .col-lg-12
+                    +e.title Блаблагруз - это
+            +b-pluses-second-list({pluses: data.pluses})

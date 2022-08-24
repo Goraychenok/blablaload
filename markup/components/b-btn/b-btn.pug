@@ -1,0 +1,10 @@
+mixin b-btn(data)
+    -
+        var data = data || {}
+        var modeList = data.modeList || []
+        var mode = ''
+        modeList.map(n => mode += `_${n} `)
+    if(data.href)
+        +b.A.b-btn(class=mode, href=data.href, data-toggle='modal')!=data.name
+    else
+        +b.b-btn(class=mode)!=data.name

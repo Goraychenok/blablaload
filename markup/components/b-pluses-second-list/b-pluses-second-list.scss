@@ -1,0 +1,39 @@
+.b-pluses-second-list {
+    display: grid;
+
+}
+.b-pluses-second-list__row {
+    @include grid-template-columns(4);
+    gap: 5px;
+}
+.b-pluses-second-list__item {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 274px;
+        height: 1px;
+        top: 25%;
+        right: -138px;
+        transform: translateY(-50%);
+        background: #F2F2F2;
+    }
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .b-pluses-second-list__item {
+        &:after {
+            display: none;
+        }
+    }
+    .b-pluses-item__text {
+        font-size: 14px;
+    }
+}
+
+

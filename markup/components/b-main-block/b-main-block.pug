@@ -1,0 +1,7 @@
+mixin b-main-block(data)
+    +b.b-main-block(style=`background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(0deg, rgba(57, 136, 96, 0.5), rgba(57, 136, 96, 0.5)), url(${data.img});`)
+        .container
+            .row
+                .col-lg-9
+                    +e.title!=data.title
+                    +e.description!=data.desc

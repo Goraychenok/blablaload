@@ -1,0 +1,12 @@
+include ../b-btn/b-btn
+mixin b-services-item(data)
+    +b.b-services-item(style=`background-image: url(${data.img});`)
+        +e.title!=data.title
+        +e.down
+            +e.price!=data.price
+            +e.btn
+                +b-btn({
+                    name: 'Оставить заявку',
+                    modeList: ['light', 'block'],
+                    href: '#callme'
+                })

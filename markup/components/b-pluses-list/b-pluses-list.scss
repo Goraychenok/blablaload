@@ -1,0 +1,20 @@
+.b-pluses-list {
+
+}
+.b-pluses-list__row {
+    @include margin-bottom-not-last(g(11));
+}
+.b-pluses-list__title {
+    font-family: $Releway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(32px);
+    line-height: 123.22%;
+    color: #292D32;
+}
+.b-pluses-list__row-second {
+    @include gutter-y(30px);
+    @include gutter(10px);
+}
+
+

@@ -25,13 +25,14 @@ include ../../../node_modules/bemto.pug/bemto.pug
                                 input(v-model="item.value", :placeholder="item.name")
             +e.info
                 +e.info-left
-                    +e.info-text Доставка: от 2 до 3 дней
+                    +e.info-text Доставка:
+                        span от 2 до 3 дней
                 +e.info-right
                     +e.info-text(v-html="getCost" )
                     +e.btn
                         +b-btn({
                             name: 'Оставить заявку',
-                            modeList: ['green'],
+                            modeList: ['green', 'block'],
                             href:'#callme_buy'
                         })
 

@@ -21,13 +21,25 @@
     line-height: 1.2;
     color: #FFFFFF;
 }
-
+@include media-breakpoint-down(lg) {
+    .b-main-block__title {
+        font-size: 45px;
+    }
+}
 @include media-breakpoint-down(md) {
     .b-main-block__title {
         font-size: 30px;
     }
     .b-main-block__description {
         font-size: 14px;
+    }
+}
+@include media-breakpoint-down(xs) {
+    .b-main-block__title {
+        font-size: 22px;
+    }
+    .b-main-block__description {
+        font-size: 12px;
     }
 }
 

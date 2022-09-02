@@ -2,6 +2,17 @@
     display: grid;
 
 }
+.b-pluses-second-list__title {
+    font-family: $Releway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(42px);
+    line-height: 1.2;
+    color: #292D32;
+    text-align: center;
+    width: 100%;
+    @include margin-bottom-not-last(g(11));
+}
 .b-pluses-second-list__row {
     @include grid-template-columns(4);
     gap: 5px;
@@ -24,7 +35,11 @@
         }
     }
 }
-
+@include media-breakpoint-down(lg) {
+    .b-pluses-item__text {
+        font-size: 14px !important;
+    }
+}
 @include media-breakpoint-down(md) {
     .b-pluses-second-list__item {
         &:after {

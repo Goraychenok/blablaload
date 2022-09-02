@@ -6,4 +6,10 @@ mixin b-pluses-list(data)
             +e.row.row
                 .col-lg-12
                     +e.title Блаблагруз - это
-            +b-pluses-second-list({pluses: data.pluses})
+            +e.row-second.row
+                for item in data.pluses
+                    .col-md-3
+                        +e.item
+                            +e.img
+                                img(src=item.img)
+                            +e.text!=item.description

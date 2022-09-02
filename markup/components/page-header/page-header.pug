@@ -28,13 +28,13 @@ mixin page-header(data)
             .container
                 +e.row-second.row
                     .col-xl-2.col-lg-3
-                    .col-xl-8.col-lg-9
+                    .col-xl-8.col-lg-7
                         +e.link-list
                             +e.A.link(href="#stock") Акции
                             +e.A.link(href="#services") Услуги
                             +e.A.link(href="#autopark") Автопарк
                             +e.A.link(href="#questions") Вопрос - ответ
-                    .col-xl-2
+                    .col-xl-2.col-lg-2
                         +e.A.buy(href="#callme_buy" data-toggle='modal')
                             !=pugHelpers.Icon.call(locals, {iconName: 'ik'})
         +e.container.container

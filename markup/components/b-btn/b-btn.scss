@@ -44,11 +44,20 @@
     &_utp{
         font-size: 14px;
         color: #fff;
-        padding: g(7) g(11);
+        padding: 17px 54px;
         background: #398860;
         &:hover {
             background: #244448;
         }
+        @include media-breakpoint-down(xs) {
+            padding: 12px 17px;
+            font-size: 12px;
+        }
+    }
+    &_car {
+        font-family: $Inter;
+        font-style: normal;
+        font-weight: 700;
     }
 }
 .b-btn_block {

@@ -2,7 +2,7 @@
     border-radius: 30px;
     aspect-ratio: 12/16;
     @include cover;
-    padding: g(10);
+    padding: 32px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -46,11 +46,20 @@
     line-height: 1.2;
     color: #FFFFFF;
     z-index: 5;
-    @include margin-bottom-not-last(g(6))
+    @include margin-bottom-not-last(16px)
+}
+@include media-breakpoint-down(lg) {
+    .b-services-item__title {
+        font-size: 16px;
+    }
+    .b-services-item {
+        padding: 16px;
+    }
 }
 @include media-breakpoint-down(xs) {
     .b-services-item {
         aspect-ratio: 14/16;
+        padding: 27px 20px;
         &:after {
             content: '';
             position: absolute;
@@ -62,6 +71,13 @@
             z-index: 2;
             border-radius: 30px;
         }
+    }
+    .b-services-item__title {
+        font-size: 20px;
+    }
+    .b-services-item__price {
+        font-size: 18px;
+        @include margin-bottom-not-last(12px);
     }
 }
 

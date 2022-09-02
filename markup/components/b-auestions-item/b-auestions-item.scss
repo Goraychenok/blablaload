@@ -7,6 +7,7 @@
     justify-content: space-between;
     cursor: pointer;
     transition: 0.2s background, border;
+    border: 1px solid #F2F2F2;
     &:hover{
         background: #398860;
         .b-auestions-item__name {
@@ -36,6 +37,8 @@
 .b-auestions-item__arrow {
     margin-left: 4px;
     transition: 0.3s transform;
+    width: 24px;
+    height: 24px;
     path {
         fill: #292D32;
     }
@@ -44,7 +47,7 @@
     transform: rotate(-180deg);
 }
 .b-auestions-item__body {
-    padding: g(5) g(11)  g(10) g(11);
+    padding: g(8) g(11)  g(10) g(11);
     font-family: $Releway;
     font-style: normal;
     font-weight: 500;
@@ -53,5 +56,19 @@
     color: #292D32;
     background: #FBFBFB;
     border-radius: 0 0 24px 24px;
+}
+@include media-breakpoint-down(xs) {
+    .b-auestions-item__name {
+        font-size: 13px;
+    }
+    .b-auestions-item__body {
+        font-size: 12px;
+    }
+    .b-questions-list__row {
+        @include gutter-y(8px);
+    }
+    .b-questions-list__row > div {
+        margin-bottom: 8px !important;
+    }
 }
 

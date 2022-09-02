@@ -76,6 +76,11 @@
     .page-footer__link {
         margin-left: 10px;
         font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .page-footer__nav-list {
+        flex-wrap: wrap;
+        margin-left: 10%;
     }
 }
 
@@ -152,4 +157,9 @@
         @include margin-bottom-not-last(7px);
     }
 
+}
+@include media-breakpoint-down(xs) {
+    .page-footer__link {
+        margin-left: 0;
+    }
 }

@@ -260,9 +260,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-    .page__b-pluses-list, .page__b-pluses-second-list {
-        display: none;
-    }
+
 }
 
 body {

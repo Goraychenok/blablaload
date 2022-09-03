@@ -38,8 +38,8 @@
 .b-stock-list__name {
     font-family: $Inter;
     font-style: normal;
-    font-weight: 600;
-    font-size: rem(24px);
+    font-weight: 700;
+    font-size: 24px;
     line-height: 1.2;
     color: #FFFFFF;
     @include margin-bottom-not-last(g(6));
@@ -51,7 +51,7 @@
     font-family: $Inter;
     font-style: normal;
     font-weight: 500;
-    font-size: rem(18px);
+    font-size: 18px;
     line-height: 1.2;
     text-transform: lowercase;
     color: #FFFFFF;
@@ -107,7 +107,7 @@
     }
     .b-stock-list__name {
         font-size: 16px;
-        @include margin-bottom-not-last(16px);
+        @include margin-bottom-not-last(12px);
     }
     .b-stock-list__description {
         font-size: 12px;

@@ -22,7 +22,7 @@
     font-family: $Releway;
     font-style: normal;
     font-weight: 700;
-    font-size: rem(24px);
+    font-size: 24px;
     line-height: 1.2;
     color: #FFFFFF;
     z-index: 5;
@@ -58,7 +58,7 @@
 }
 @include media-breakpoint-down(xs) {
     .b-services-item {
-        aspect-ratio: 14/16;
+        aspect-ratio: 12/16;
         padding: 27px 20px;
         &:after {
             content: '';
@@ -80,6 +80,8 @@
         @include margin-bottom-not-last(12px);
     }
 }
+
+
 
 
 

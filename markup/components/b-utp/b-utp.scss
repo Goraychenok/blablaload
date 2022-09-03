@@ -23,7 +23,7 @@
     font-family: $Releway;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.2;
     color: #292D32;
     @include margin-bottom-not-last(rem(32px));
@@ -58,8 +58,7 @@
         @include margin-bottom-not-last(18px);
     }
     .b-utp__btn {
-        margin-top: 18px;
-        height: 48px;
+
     }
 }
 

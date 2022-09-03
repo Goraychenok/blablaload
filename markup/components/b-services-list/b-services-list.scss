@@ -40,4 +40,9 @@
         overflow: hidden;
     }
 }
-
+@media (max-width: 330px) {
+    .b-services-list__item {
+        min-width: 260px;
+        width: 260px;
+    }
+}

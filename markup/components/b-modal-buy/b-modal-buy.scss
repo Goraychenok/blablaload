@@ -73,7 +73,7 @@
 
 .b-modal-buy__input {
     margin-bottom: 12px;
-    &:nth-child(3) {
+    &:nth-child(4) {
         margin-bottom: 24px;
     }
 }
@@ -129,7 +129,7 @@
 .b-modal-buy__input {
     //font-family: $Lato;
     margin-bottom: 12px;
-    &:nth-child(3) {
+    &:nth-child(4) {
         margin-bottom: 24px;
     }
 }
@@ -156,7 +156,21 @@
         color: #8AC5A7;
     }
 }
-
+.b-modal-buy__select {
+    box-sizing: border-box;
+    width: 100%;
+    background: #FBFBFB;
+    border: 1px solid #F2F2F2;
+    border-radius: 12px;
+    padding: 22px 20px;
+    font-family: $Releway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #292D32;
+    margin-bottom: 24px;
+}
 @include media-breakpoint-down(sm) {
     .b-modal-buy__call {
         flex-direction: column;

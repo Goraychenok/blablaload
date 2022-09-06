@@ -178,12 +178,13 @@ export default{
 
             if(height !== '' && height !== null) {
                 height = Number(height)
-                if(height <= 210 && height > 0) {
-                    return 210
-                }else if(height > 210 && height < 250) {
-                     return 210
+                console.log(height)
+                if(height <= 2.1 && height > 0) {
+                    return 2.1
+                }else if(height > 2.1 && height <= 2.5) {
+                     return 2.5
                 }else {
-                    return 'Максимальная высота 250м и указывается в числах'
+                    return 'Максимальная высота 2.5м и указывается в числах'
                 }
             }
             return false

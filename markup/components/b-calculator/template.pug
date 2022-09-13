@@ -6,7 +6,7 @@ include ../../../node_modules/bemto.pug/bemto.pug
         +e.block
             +e.title Рассчитать стоимость
             +e.tabs
-                +e.tab(v-for="item in filterData"
+                +e.tab(v-for="item in getFilteredData"
 
                 )
                     template(v-if="item.type === 'select'" )
@@ -33,6 +33,6 @@ include ../../../node_modules/bemto.pug/bemto.pug
                         +b-btn({
                             name: 'Оставить заявку',
                             modeList: ['green', 'block'],
-                            href:'#callme_buy'
+                            href:'#callme'
                         })
 

@@ -153,19 +153,19 @@ export default {
                         this.typeLongInSearch = 1;
                         break;
                     case "Евро палеты (1,2 на 0,8)":
-                        if (met === 0 || met > 4 || met < 0) {
-                            return "Колличество палет от 1 до 4";
+                        if (met === 0 || met > 12 || met < 0) {
+                            return "Колличество палет от 1 до 12";
                         }
                         this.typeLongInSearch = 2;
                         break;
                     case "Финские палеты (1,2 на 1)":
-                        if (met === 0 || met > 2 || met < 0) {
-                            return "Колличество палет от 1 до 2";
+                        if (met === 0 || met > 12 || met < 0) {
+                            return "Колличество палет от 1 до 12";
                         }
                         this.typeLongInSearch = 3;
                         break;
                     case "Американский (1,2 на 1,2)":
-                        if (met === 0 || met > 2 || met < 0) {
+                        if (met === 0 || met > 10 || met < 0) {
                             return "Колличество палет от 1 до 2";
                         }
                         this.typeLongInSearch = 4;

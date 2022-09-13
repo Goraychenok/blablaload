@@ -10,11 +10,22 @@
         margin: 0;
     }
     .vs__dropdown-toggle {
-        padding: 11.5px 24px;
+        padding: 11.5px 20px;
         margin: 0;
         border: none;
         border-radius: 0;
+        height: 100% !important;
     }
+    .b-calculator__select {
+        height: 100%;
+        .v-select {
+            height: 100% !important;
+        }
+    }
+
+}
+.b-calculator__mobile-btn {
+    display: none;
 }
 .b-calculator__tab:nth-child(1) {
     .vs__dropdown-toggle {
@@ -196,15 +207,18 @@
         .b-calculator__tab:nth-child(1) {
             @include col-span(1);
             .selectric {
+
+            }
+            .vs__dropdown-toggle {
+                border-radius: 12px 0 0 12px;
+            }
+        }
+        .b-calculator__tab:nth-child(3) {
+            .selectric {
                 border-radius: 0;
             }
             .vs__dropdown-toggle {
-                border-radius: 0;
-            }
-        }
-        .b-calculator__tab:last-child {
-            .selectric {
-                border-radius: 0;
+                border-radius: 0 12px 12px 0;
             }
         }
         .b-calculator__tab:nth-child(2)  {
@@ -224,7 +238,12 @@
                 display: none;
             }
             input {
-                border-radius: 0;
+                border-radius: 0 12px 12px 0;
+            }
+        }
+        .b-calculator__tab:nth-child(4) {
+            input {
+                border-radius: 12px 0 0 12px;
             }
         }
     }
@@ -233,6 +252,13 @@
         input {
             width: 100%;
         }
+    }
+    .b-calculator__btn {
+        display: none;
+    }
+    .b-calculator__mobile-btn {
+        display: block;
+        text-align: center;
     }
 }
 
@@ -272,7 +298,7 @@
             margin-bottom: 24px;
         }
     }
-    .b-calculator__btn {
+    .b-calculator__mobile-btn{
         width: 100%;
         margin-left: 0;
         .b-btn {
@@ -280,7 +306,7 @@
         }
     }
     .b-calculator .vs__dropdown-toggle {
-        padding: 15.5px 0 15.5px 24px;
+        padding: 15.5px 15.5px 15.5px 24px;
     }
 }
 @include media-breakpoint-down(xs) {
@@ -300,7 +326,7 @@
     .b-calculator__info-left {
         width: 0;
     }
-    .b-calculator__btn {
+    .b-calculator__mobile-btn {
         .b-btn {
             display: block !important;
         }

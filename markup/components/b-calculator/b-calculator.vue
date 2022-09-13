@@ -343,7 +343,9 @@ export default {
                 if (this.checkCity(citySecond)) {
                     finalCost = finalCost + this.checkCity(citySecond);
                 }
-
+                if (this.checkCity(cityFirst)) {
+                    finalCost = finalCost + this.checkCity(cityFirst);
+                }
                 return (this.result = `Стомость <span>${this.priceFormatter(
                     finalCost
                 )}</span> ₽`);

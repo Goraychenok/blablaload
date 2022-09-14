@@ -12,35 +12,118 @@ export default {
     },
     data() {
         return {
+            cityState: "",
             long: "",
             weight: "",
             cities: [
-                "Тула",
-                "Новомосковск",
-                "Донской",
-                "Щёкино",
-                "Узловая",
-                "Киреевск",
-                "Ясногорск",
-                "Болохово",
-                "Калуга",
-                "Обнинск",
-                "Малоярославец",
-                "Балабаново",
-                "Жуков",
-                "Белоусово",
-                "Боровск",
-                "Кремёнки",
-                "Ермолино",
-                "Полотняный завод",
-                "Товарково",
-                "Детчино",
-                "Добрино",
-                "Серпухов",
-                "Пущино",
-                "Чехов",
-                "Протвино",
-                "Санкт -Петербург",
+                {
+                    name: "Тула",
+                    location: 1
+                },
+                {
+                    name: "Новомосковск",
+                    location: 1,
+                },
+                {
+                    name: "Донской",
+                    location: 1,
+                },
+                {
+                    name: "Щёкино",
+                    location: 1,
+                },
+                {
+                    name: "Узловая",
+                    location: 1,
+                },
+                {
+                    name: "Киреевск",
+                    location: 1,
+                },
+                {
+                    name: "Ясногорск",
+                    location: 1
+                },
+                {
+                    name: "Болохово",
+                    location: 1,
+                },
+                {
+                    name: "Калуга",
+                    location: 1
+                },
+                {
+                    name: "Обнинск",
+                    location: 1
+                },
+                {
+                    name: "Малоярославец",
+                    location: 1
+                },
+                {
+                    name: "Балабаново",
+                    location: 1
+                },
+                {
+                    name: "Жуков",
+                    location: 1
+                },
+                {
+                    name: "Белоусово",
+                    location: 1
+                },
+                {
+                    name: "Боровск",
+                    location: 1
+                },
+                {
+                    name: "Кремёнки",
+                    location: 1
+                },
+                {
+                    name: "Ермолино",
+                    location: 1
+                },
+                {
+                    name: "Полотняный завод",
+                    location: 1
+                },
+                {
+                    name: "Товарково",
+                    location: 1
+                },
+                {
+                    name: "Детчино",
+                    location: 1
+                },
+                {
+                    name: "Добрино",
+                    location: 1
+                },
+                {
+                    name: "Серпухов",
+                    location: 1
+                },
+                {
+                    name: "Пущино",
+                    location: 1
+                },
+                {
+                    name: "Чехов",
+                    location: 1
+                },
+                {
+                    name: "Протвино",
+                    location: 1
+                },
+                {
+                    name: "СПБ (КАД)",
+                    location: 2
+                },
+                {
+                    name: "СПБ (КАД+10 км.)",
+                    location: 2
+                },
             ],
             typeOfSize: 1,
             longName: "Метры",
@@ -357,58 +440,68 @@ export default {
         getCitiesFirst() {
             const firstCity = this.getFilterValueByCode("from");
             const secondCity = this.getFilterValueByCode("to");
-            if (secondCity !== "Куда" && firstCity === "Откуда") {
-                let newFirstCityArr = this.cities;
-                const indexCity = newFirstCityArr.indexOf("Санкт-Петербург");
-                if (secondCity === "Санкт-Петербург") {
-                    return (newFirstCityArr = newFirstCityArr[indexCity]);
-                } else {
-                    return (newFirstCityArr = newFirstCityArr.splice(
-                        indexCity,
-                        1
-                    ));
-                }
+            const elem = this.cities.filter(n => {
+                return n.name === secondCity
+            })
+            if ((secondCity !== "Куда" && firstCity === "Откуда") || this.cityState === 1) {
+                const elem = this.cities.filter(n => {
+                    return n.name === secondCity
+                })
+                const location = elem.location
+                const resultArr = this.cities.filter(n => {
+                   return  n.location !== location
+                })
+                this.cityState = 1
+                return resultArr.map(n => {
+                    return n.name
+                })
             } else {
-                return this.cities;
+                return this.cities.map(n => {
+                    return n.name
+                });
             }
         },
         getCitiesSecond() {
             const firstCity = this.getFilterValueByCode("from");
             const secondCity = this.getFilterValueByCode("to");
-            if (firstCity !== "Откуда" && secondCity === "Куда") {
-                let newFirstCityArr = this.cities;
-                const indexCity = newFirstCityArr.indexOf("Санкт-Петербург");
-                if (firstCity === "Санкт-Петербург") {
-                    return (newFirstCityArr = newFirstCityArr[indexCity]);
-                } else {
-                    return (newFirstCityArr = newFirstCityArr.splice(
-                        indexCity,
-                        1
-                    ));
-                }
+            if ( (firstCity !== "Откуда" && secondCity === "Куда") || this.cityState === 2) {
+
+                const elem = this.cities.find(n => {
+                    return n.name === firstCity
+                })
+                const location = elem.location
+                const resultArr = this.cities.filter(n => {
+                    return n.location !== location
+                })
+                this.cityState = 2
+                return resultArr.map(n => {
+                    return n.name
+                })
+
+
             } else {
-                return this.cities;
+                return this.cities.map(n => {
+                    return n.name
+                });
             }
         },
         getFilteredData: {
             set(v) {
-                this.filterData = v
+                this.filterData = v;
             },
             get() {
-                return this.filterData.map(n => {
-                    if(n.name === 'Откуда') {
-                        n.options = this.getCitiesFirst
-                    }else if(n.name === 'Куда') {
-                        n.options = this.getCitiesSecond
+                return this.filterData.map((n) => {
+                    if (n.name === "Откуда") {
+                        n.options = this.getCitiesFirst;
+                    } else if (n.name === "Куда") {
+                        n.options = this.getCitiesSecond;
                     }
-                    return n
-                })
-            }
-        }
+                    return n;
+                });
+            },
+        },
     },
-    mounted() {
-
-    },
+    mounted() {},
     filters: {},
 };
 </script>
